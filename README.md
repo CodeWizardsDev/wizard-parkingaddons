@@ -15,16 +15,12 @@
 
 ## 🖼️ ShowCase <a name = "showcase"></a>
 ### 🅿 Parking sensor
-<video width="720" controls>
-  <source src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fr6IJ1geM7hXoxRHNtAFs%2Fuploads%2FyzAxzdVIihN81H7BrWXz%2Fp_sensor.mp4?alt=media" type="video/mp4">
-  Your browser doesn't support HTML video showcase
-</video>
+https://github.com/user-attachments/assets/5acdaf10-7ee8-4837-bbe6-d02fb3fa1952
+
+
 
 ### 🎥 Camera 360
-<video width="720" controls>
-  <source src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fr6IJ1geM7hXoxRHNtAFs%2Fuploads%2FZjxwzOxQC56G1IE4Vlhv%2Fp_cam360.mp4?alt=media" type="video/mp4">
-  Your browser doesn't support HTML video showcase
-</video>
+https://github.com/user-attachments/assets/3160b7e0-e5b1-4f76-805a-b490f87e97bf
 
 ## 🚀 Features Scope <a name = "feature_scope"></a>
 - Standalone script
