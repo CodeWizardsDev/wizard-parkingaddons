@@ -1,4 +1,4 @@
-<h1 align="center">Wizard Transmission</h1>
+<h1 align="center">Wizard Parking Addons</h1>
 <p align="center">A FiveM resource that adds parking sensor and camera 360 to your server!
 <br>
 </p>
