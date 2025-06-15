@@ -4,7 +4,7 @@ games { 'gta5' }
 author 'The_Hs5'
 
 description 'Simple fivem vehicles parking sensor script:)'
-version '1.0.0'
+version '1.0.1'
 
 shared_scripts {
     'config.lua'
