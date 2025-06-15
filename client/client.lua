@@ -4,11 +4,11 @@ local thresholdMedium = Config.Thresholds.medium
 local thresholdClose = Config.Thresholds.close
 local thresholdVeryClose = Config.Thresholds.veryClose
 local beepIntervals = Config.BeepInvervals
+local entityPositions, occupants = {}, {}
 local lastBeepTime = 0
 local uiVisible = false
 local dist = 9999
 local doBeepSound = false
-local occupants = {}
 local Cam360 = nil
 local is360CamActive = false
 
@@ -105,7 +105,6 @@ CreateThread(function()
                         occupants[occupantPed] = true
                     end
                 end
-                local entityPositions = {}
                 if Config.DetectPed then
                     local peds = GetGamePool('CPed')
                     for _, pedEntity in ipairs(peds) do
