@@ -85,9 +85,9 @@ CreateThread(function()
         Wait(500)
         local ped = PlayerPedId()
         local vehicle = GetVehiclePedIsIn(ped, false)
-        if vehicle ~= 0 and GetVehicleClass(vehicle) ~= 13 and GetPedInVehicleSeat(vehicle, -1) == ped and Config.ParkSensor then
+        if vehicle ~= 0 and GetVehicleClass(vehicle) ~= 13 and GetPedInVehicleSeat(vehicle, -1) == ped and Config.ParkSensor then -- Check if vehicle is valid, not cycle and player is driver
             local gear = GetVehicleCurrentGear(vehicle)
-            if gear == 0 then
+            if gear == 0 then -- Check if vehicle is in reverse gear
                 if not uiVisible then
                     SendNUIMessage({ action = 'show' })
                     uiVisible = true
@@ -99,7 +99,7 @@ CreateThread(function()
                 local detectedEntity = nil
                 local minDist = 9999
                 local occupants = {}
-                for seatIndex = -1, 6 do
+                for seatIndex = -1, 6 do -- To prevent the script from detecting passengers of the vehicle
                     local occupantPed = GetPedInVehicleSeat(vehicle, seatIndex)
                     if occupantPed and occupantPed ~= 0 then
                         occupants[occupantPed] = true
@@ -230,27 +230,6 @@ CreateThread(function()
             end
         end
         Wait(doBeepSound and 200 or 750) 
-    end
-end)
-    -- 360 camera thread
-CreateThread(function()
-    while Config.HybridVehicle do
-        Wait(400)
-        local model = GetEntityModel(vehicle)
-        if Config.HybridList[model] then
-            local currSpeed = GetEntitySpeed(vehicle) * 3.6
-            local hybridData = Config.HybridList[model]
-            local vehSoundNew = currSpeed > Config.MaxElectricSpeed and hybridData.engine2 or hybridData.engine1
-            
-            if vehSound ~= vehSoundNew then
-                local radioSt = GetPlayerRadioStationName() or "OFF"
-                print(radioSt)
-                ForceUseAudioGameObject(vehicle, vehSoundNew)
-                Wait(100)
-                SetRadioToStationName(radioSt)
-                vehSound = vehSoundNew
-            end
-        end
     end
 end)
 
